@@ -1,0 +1,83 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+/*  CSS Resets */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {	
+	margin-bottom: 24px;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Globals */
+:root {
+	--white: #ffffff;
+	--off-white: hsla(151, 15%, 95%, 1);
+	--light-grey: hsla(151, 5%, 90%, 1);
+	--dark-grey: hsla(151, 5%, 50%, 1);
+    --off-black: hsla(141, 2%, 20%, 1);
+	--black: hsla(151, 91%, 5%, 1);
+	--ml-green: hsla(151, 91%, 40%, 1);
+	--ml-green-light: hsla(151, 91%, 95%, 1);
+	--ml-green-dark: hsla(151, 91%, 30%, 1);
+	--ml-green-mid: hsla(151, 91%, 70%, 1);
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+body {
+	font-family: -apple-system, sans-serif;
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-size: 16px;
+}
+::selection {
+    background-color: var(--ml-green-dark);
+    color: var(--off-white);
+  }
