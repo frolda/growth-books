@@ -86,10 +86,9 @@ body {
     background-color: var(--ml-green-dark);
     color: var(--off-white);
 }
-
 button {
     display: inline-flex;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
     font-size: 1.125rem;
     justify-content: center;
     align-items: center;
@@ -97,18 +96,27 @@ button {
     border-radius: 0.5rem;
     cursor: pointer;
     border: none;
-    color: var(--off-white);
+    color: var(--white);
     font-weight: 500;
-    letter-spacing: -0.02rem;
     background: var(--ml-green);
     box-shadow: 0px 3.5px 6px 0px rgba(0, 0, 0, 0.09), 0px 0.9px 1.5px 0px rgba(0, 0, 0, 0.05), 0px 0.3px 0.4px 0px rgba(0, 0, 0, 0.02), 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 0.5px 0px 1px rgba(255, 255, 255, 0.08) inset;
 }
-
-.button-secondary {
-    background: var(--light-grey);
-    color: var(--off-black);
+button:hover {
+    background: var(--ml-green-dark);
+    box-shadow: 0px 7px 12px 0px rgba(9, 94, 105, 0.09), 0px 0.9px 1.5px 0px rgba(9, 94, 105, 0.05), 0px 0.3px 0.4px 0px rgba(9, 94, 105, 0.02), 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 0.5px 0px 1px rgba(255, 255, 255, 0.08) inset;
 }
-
+.button-small {
+    padding: 0.5rem 0.75rem;
+}
+.button-secondary {
+    background: var(--white);
+    border-color: var(--dark-grey);
+    color: var(--dark-grey);
+}
+.button-secondary:hover {
+    background: var(--off-white);
+    box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.09), 0px 0.9px 1.5px 0px rgba(0, 0, 0, 0.05), 0px 0.3px 0.4px 0px rgba(0, 0, 0, 0.02), 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 0.5px 0px 1px rgba(255, 255, 255, 0.08) inset;
+}
 .button-transparent {
     background: transparent;
     padding: 0;
@@ -119,7 +127,7 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: -0.125rem;
 }
@@ -127,7 +135,7 @@ h2 {
     color: var(--black);
     font-size: 2rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: -0.08rem;
 }
@@ -135,7 +143,7 @@ h3 {
     color: var(--black);
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: -0.075rem;
 }
@@ -258,9 +266,15 @@ header img {
         max-width: 64vw;
     }
 }
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        background-size: 120vw;
+    }
+}
 @media screen and (max-width: 768px) {
     .hero-section {
         padding-block: 4rem;
+        background-size: 144vw;
     }
     .headline-container {
         max-width: 80vw;
@@ -305,6 +319,30 @@ header img {
     width: 10vw;
     height: auto;
 }
+@media screen and (max-width: 1024px) {
+    .hero-graphic-container {
+        padding-block-end: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-graphic-books-column-1 {
+        gap: 1vh;
+        margin-top: -2.75rem;
+    }
+    .hero-graphic-books-column-2 {
+        gap: 1vh;
+        margin-top: -6.75rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero-graphic-books-column-1 {
+        gap: 0.75vh;
+        margin-top: -4.75rem;
+    }
+    .hero-graphic-books-column-2 {
+        gap: 0.75vh;
+    }
+}
 
 /* Banners */
 .inline-banner {
@@ -327,10 +365,14 @@ header img {
     align-items: flex-start;
     gap: 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .inline-banner {
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .inline-banner {
         padding-inline: calc((100vw - 80vw) / 2);
         padding-inline-end: 20%;
         padding-block: 4rem;
@@ -370,8 +412,8 @@ header img {
     padding: 2.5rem 2rem;
 }
 .book-item img {
-    width: 9.735rem;
-    height: 13.75rem;
+    width: 9vh;
+    height: auto;
     flex-shrink: 0;
 }
 .book-details {
@@ -397,10 +439,12 @@ header img {
     font-size: 1rem;
     font-weight: 400;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .books-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+@media screen and (max-width: 768px) {
     .books-section {
         padding-inline: calc((100vw - 80vw) / 2);
         padding-block: 4rem;
@@ -504,6 +548,9 @@ header img {
     .container-3 {grid-area: 3 / 1 / 4 / 13;}
     .container-4 {grid-area: 4 / 1 / 5 / 13;}
     .container-5 {grid-area: 5 / 1 / 6 / 13;}
+    .advantages-container-medium svg {
+        margin-right: 4vw;
+    }
 }
 @media screen and (max-width: 768px) {
     .advantages-section {

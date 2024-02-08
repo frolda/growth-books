@@ -12,7 +12,7 @@
         <!-- Header -->
         <header>
             <img src="images/logo.png"/>
-            <button>Get the bundle</button>
+            <button class="button-small">Get the bundle</button>
         </header>
         <!-- Hero section -->
         <section class="hero-section">
@@ -30,12 +30,12 @@
                 <button class="button-secondary">Explore books</button>
             </div>
             <div class="hero-graphic-container">
-                <div class="hero-graphic-books-column-1">
+                <div class="hero-graphic-books-column-1 parallax" id="parallax">
                     <img src="images/the-obstacle-is-the-way.png" />
                     <img src="images/ikigai.png" />
                     <img src="images/atomic-habits.png" />
                 </div>
-                <div class="hero-graphic-books-column-2">
+                <div class="hero-graphic-books-column-2 parallax" id="parallax">
                     <img src="images/cant-hurt-me.png" />
                     <img src="images/the-4-hour-ww.png" />
                     <img src="images/5-amclub.png" />
@@ -238,7 +238,7 @@
         <!-- Banner three -->
         <section class="inline-banner left-gradient">
             <h2>Unlock your true potential and start your transformation journey today</h2>
-            <p>This is your opportunity to leap beyond boundaries, to elevate your life, and to achieve unparalleled personal and professional growth.<br/>The perfect moment is now.<br/>Take action, secure your bundle, and begin the journey to a more fulfilled, successful, and empowered you. Your future awaits.</p>
+            <p>This is your opportunity to leap beyond boundaries, to elevate your life, and to achieve unparalleled personal and professional growth.<br/><br/>The perfect moment is now.<br/><br/>Take action, secure your bundle, and begin the journey to a more fulfilled, successful, and empowered you. Your future awaits.</p>
         </section>
         <!-- Testimonials -->
         <section class="testimonials-section">
@@ -300,3 +300,14 @@
         </footer>
     </body>
 </html>
+
+<script>
+    const column1elements = document.querySelectorAll('.hero-graphic-books-column-1');
+
+    window.addEventListener('scroll', function() {
+        let offset = window.pageYOffset;
+        column1elements.forEach((element) => {
+            element.style.marginTop = `-${offset * 0.15}px`
+        })
+    })
+</script>
